@@ -3,7 +3,7 @@ const School = require("../models/School");
 
 const router = express.Router();
 
-// ✅ POST API - Add a school code
+// POST API - Add a school code
 router.post("/schools", async (req, res) => {
   try {
     const { code } = req.body;
@@ -28,7 +28,7 @@ router.post("/schools", async (req, res) => {
 });
 
 
-// ✅ GET API - Retrieve all school codes
+// GET API - Retrieve all school codes
 router.get("/schools", async (req, res) => {
   try {
     const schools = await School.find();
@@ -38,7 +38,7 @@ router.get("/schools", async (req, res) => {
   }
 });
 
-// ✅ GET API - Validate School Code
+// GET API - Validate School Code
 router.get("/schools/:code", async (req, res) => {
   try {
     const { code } = req.params;
