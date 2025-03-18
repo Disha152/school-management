@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 9000;
 // Middleware
 app.use(express.json());
 
-// ✅ Import and Use Routes
+// Import and Use Routes
 const schoolRoutes = require("./routes/schoolRoutes");
 app.use("/api", schoolRoutes);
 
-// ✅ Default Route for Testing
+// Default Route for Testing
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
