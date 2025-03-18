@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
-const SchoolSchema = new mongoose.Schema({
-  code: {
-    type: String,
-    required: [true, "School code is required"],
-    unique: true,
-  },
+const schoolSchema = new mongoose.Schema({
+  code: { type: String, required: true, unique: true },
 });
 
-module.exports = mongoose.model("School", SchoolSchema);
+const School = mongoose.model("School", schoolSchema);
+module.exports = School;
