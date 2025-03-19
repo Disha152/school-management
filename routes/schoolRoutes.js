@@ -45,7 +45,7 @@ router.get("/schools/:code", async (req, res) => {
     const school = await School.findOne({ code });
 
     if (school) {
-      const schoolUrl = `https://schoolmapping.eduwheels.com/AdminWebService.asmx/ValidateSchoolCode?strSchoolCode=${code}`;
+      const schoolUrl = 'https://schoolmapping.eduwheels.com/';
       res.status(200).json({
         success: true,
         statusCode: 200,
